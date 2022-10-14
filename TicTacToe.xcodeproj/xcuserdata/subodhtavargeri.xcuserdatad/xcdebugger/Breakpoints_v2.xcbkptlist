@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3D98E20B-CA7A-4642-906B-8A242BD27DB0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TicTacToe/Game/Game.swift"
