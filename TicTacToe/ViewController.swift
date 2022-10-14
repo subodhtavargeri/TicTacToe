@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  TicTacToe
-//
-//  Created by Subodh Tavargeri on 14/10/22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,7 +6,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 
