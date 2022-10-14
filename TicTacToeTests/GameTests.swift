@@ -29,7 +29,7 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.boardArray.count, expected)
     }
     
-    func test_CurrentPlayerIsChangesToPlayerO_WhenPlayerXTurnIsDone() {
+    func test_CurrentPlayerIsChangedToPlayerO_WhenPlayerXTurnIsDone() {
         
         game.playerPlays()
         let expected = "O"
