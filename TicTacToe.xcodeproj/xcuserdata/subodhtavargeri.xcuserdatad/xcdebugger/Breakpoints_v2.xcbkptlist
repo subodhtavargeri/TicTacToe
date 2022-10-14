@@ -49,6 +49,21 @@
                   endingLineNumber = "118"
                   offsetFromSymbolStart = "784">
                </Location>
+               <Location
+                  uuid = "F107F172-E87E-47C0-B16A-8E6A4B615BAE - f872a225e8f50256"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TicTacToeTests.GameTests.test_PlayerXWins_WhenAnyPlayerMatchesRules_2_5_6() -&gt; ()"
+                  moduleName = "TicTacToeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subodhtavargeri/Documents/TicTacToe-1/TicTacToe/TicTacToeTests/GameTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "784">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -82,6 +97,38 @@
             endingLineNumber = "129"
             landmarkName = "test_PlayerXWins_WhenPlayerXPositionMatchesRules_0_1_2()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "08013E35-40E3-4A65-B5A7-028E6C03477D - f2120ea6a639accf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TicTacToeTests.GameTests.test_PlayerXWins_WhenAnyPlayerMatchesRules_0_1_2() -&gt; ()"
+                  moduleName = "TicTacToeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subodhtavargeri/Documents/TicTacToe-1/TicTacToe/TicTacToeTests/GameTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "08013E35-40E3-4A65-B5A7-028E6C03477D - c5d4acbfe4460c94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TicTacToeTests.GameTests.test_PlayerXWins_WhenPlayerXPositionMatchesRules_0_1_2() -&gt; ()"
+                  moduleName = "TicTacToeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subodhtavargeri/Documents/TicTacToe-1/TicTacToe/TicTacToeTests/GameTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "832">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
