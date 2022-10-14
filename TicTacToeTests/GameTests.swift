@@ -204,7 +204,20 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player O Wins"
+        let expecation = "Player X Wins"
+        XCTAssertEqual(original, expecation)
+    }
+    
+    func test_PlayerXWins_WhenPlayerXMatchesRules_InReverseOrder_4_8_0() {
+        
+        var original = ""
+        
+        let playIndex = [4,2,8,5,0]
+        for index in 0..<playIndex.count {
+            original = game.playerPlays(index: playIndex[index]) ?? ""
+        }
+        
+        let expecation = "Player X Wins"
         XCTAssertEqual(original, expecation)
     }
 }
