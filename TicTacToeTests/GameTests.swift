@@ -33,6 +33,16 @@ class GameTests: XCTestCase {
         
         game.playerPlays()
         let expected = "O"
+        
+        XCTAssertEqual(game.currentPlayer.name, expected)
+    }
+    
+    func test_CurrentPlayerIsChangedToPlayerX_WhenPlayerOTurnIsDone() {
+        
+        game.playerPlays()
+        game.playerPlays()
+        
+        let expected = "X"
         XCTAssertEqual(game.currentPlayer.name, expected)
     }
     
