@@ -47,6 +47,10 @@ class Game {
                 return "Player \(player0) Wins"
             }
         }
+        
+        if !boardArray.contains("") {
+            return "Game Ends in an Draw!!!"
+        }
         return nil
     }
 }
