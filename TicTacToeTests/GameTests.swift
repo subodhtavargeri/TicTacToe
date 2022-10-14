@@ -19,4 +19,12 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.playerO.name,expected)
     }
     
+    func test_CurrentPlayerIsSetToPlayerX_WhenGameLoads() {
+        
+        let game = Game()
+        
+        let expected = "X"
+        XCTAssertEqual(game.currentPlayer.name, expected)
+    }
+    
 }
