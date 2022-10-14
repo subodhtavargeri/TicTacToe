@@ -31,6 +31,7 @@ class Game {
             if let value = checkPlayerWinStatus() {
                 return value
             }
+            
             return boardArray[index]
         }
         return nil

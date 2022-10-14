@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "085678E6-B473-4F34-A340-E933BE4D9DA5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TicTacToe/Game/Game.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "playerPlays(index:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F107F172-E87E-47C0-B16A-8E6A4B615BAE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -34,6 +18,38 @@
             endingLineNumber = "118"
             landmarkName = "test_PlayerXWins_WhenAnyPlayerMatchesRules_2_5_6()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F107F172-E87E-47C0-B16A-8E6A4B615BAE - 252c0f8293db006d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TicTacToeTests.GameTests.test_PlayerWins_WhenAnyPlayerMatchesRules() -&gt; ()"
+                  moduleName = "TicTacToeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subodhtavargeri/Documents/TicTacToe-1/TicTacToe/TicTacToeTests/GameTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "880">
+               </Location>
+               <Location
+                  uuid = "F107F172-E87E-47C0-B16A-8E6A4B615BAE - f872a225e8f50294"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TicTacToeTests.GameTests.test_PlayerXWins_WhenAnyPlayerMatchesRules_2_5_6() -&gt; ()"
+                  moduleName = "TicTacToeTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/subodhtavargeri/Documents/TicTacToe-1/TicTacToe/TicTacToeTests/GameTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "784">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,9 +62,25 @@
             filePath = "TicTacToe/Game/Game.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "checkWinGameStatus()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "checkPlayerWinStatus()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08013E35-40E3-4A65-B5A7-028E6C03477D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TicTacToeTests/GameTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "test_PlayerXWins_WhenPlayerXPositionMatchesRules_0_1_2()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
