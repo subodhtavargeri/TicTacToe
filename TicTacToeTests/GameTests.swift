@@ -54,4 +54,24 @@ class GameTests: XCTestCase {
         let expected = "X"
         XCTAssertEqual(game.boardArray[index], expected)
     }
+    
+    func test_NewValueIsNotInsertedIntoBoardArrayAtIndex_IfIndexIsNotEmptyAtBoardValue() {
+        
+        let index = 1
+        game.playerPlays(index: index)
+        
+        game.playerPlays(index: index)
+        
+        let expected = "X"
+        XCTAssertEqual(game.boardArray[index], expected)
+    }
+    
+    func test_CurrentPlayerIsUpdated_WhenBoardArrayValueIsUpdated() {
+        
+        let index = 2
+        game.playerPlays(index: index)
+        
+        let expected = "O"
+        XCTAssertEqual(game.currentPlayer.name, expected)
+    }
 }
