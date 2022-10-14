@@ -3,8 +3,6 @@ import XCTest
 
 class GameTests: XCTestCase {
     
-    
-    
     let game = Game()
     
     func test_PlayerXNameIsSet_WhenGameLoads() {
@@ -137,6 +135,19 @@ class GameTests: XCTestCase {
         var original = ""
         
         let playIndex = [0,3,1,4,8,5]
+        for index in 0..<playIndex.count {
+            original = game.playerPlays(index: playIndex[index]) ?? ""
+        }
+        
+        let expecation = "Player O Wins"
+        XCTAssertEqual(original, expecation)
+    }
+    
+    func test_PlayerOWins_WhenPlayerOMatchesRules_6_7_8() {
+        
+        var original = ""
+        
+        let playIndex = [0,6,1,7,3,8]
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
