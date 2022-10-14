@@ -19,6 +19,9 @@ class Game {
     }
     
     func playerPlays(index: Int) {
-        currentPlayer = (currentPlayer == playerX) ? playerO : playerX
+        if boardArray[index].isEmpty {
+            boardArray[index] = currentPlayer.name
+            currentPlayer = (currentPlayer == playerX) ? playerO : playerX
+        }
     }
 }
