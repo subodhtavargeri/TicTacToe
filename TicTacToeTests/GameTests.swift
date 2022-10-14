@@ -23,9 +23,9 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.currentPlayer.name, expected)
     }
     
-    func test_BoardArrayIsEmpty_WhenGameLoads() {
+    func test_BoardArrayCountIsNine_WhenGameLoads() {
         
-        let expected = 0
+        let expected = 9
         XCTAssertEqual(game.boardArray.count, expected)
     }
     
@@ -46,9 +46,4 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.currentPlayer.name, expected)
     }
     
-    func test_InsertCurrentPlayerNameInBoardArray() {
-        
-        game.playerPlays(index: 1)
-        XCTAssertEqual(game.boardArray[1], "X")
-    }
 }

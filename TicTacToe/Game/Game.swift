@@ -9,6 +9,13 @@ class Game {
         playerX = Player(name: "X")
         playerO = Player(name: "O")
         currentPlayer = playerX
+        setUpBoardArray()
+    }
+    
+    private func setUpBoardArray() {
+        for _ in 1...9 {
+            boardArray.append("")
+        }
     }
     
     func playerPlays(index: Int) {
