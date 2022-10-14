@@ -46,4 +46,9 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.currentPlayer.name, expected)
     }
     
+    func test_InsertCurrentPlayerNameInBoardArray() {
+        
+        game.playerPlays(index: 1)
+        XCTAssertEqual(game.boardArray[1], "X")
+    }
 }
