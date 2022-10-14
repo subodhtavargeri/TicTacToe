@@ -94,4 +94,14 @@ class GameTests: XCTestCase {
         let expected = "O"
         XCTAssertEqual(originalName, expected)
     }
+    
+    func test_CurrentPlayerNameIsReturnedAsNil_WhenBoardArrayIndexHasValue() {
+        
+        let index = 2
+        let _ = game.playerPlays(index: 2)
+        
+        let originalName = game.playerPlays(index: index)
+        
+        XCTAssertNil(originalName)
+    }
 }
