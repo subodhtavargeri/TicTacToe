@@ -11,7 +11,7 @@ class Game {
         currentPlayer = playerX
     }
     
-    func playerPlays() {
+    func playerPlays(index: Int) {
         currentPlayer = (currentPlayer == playerX) ? playerO : playerX
     }
 }
