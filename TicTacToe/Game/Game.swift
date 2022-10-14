@@ -1,3 +1,6 @@
+protocol GameProtocol {
+    func playerPlays(index: Int) -> String?
+}
 class Game {
     
     private (set) var playerX: Player
