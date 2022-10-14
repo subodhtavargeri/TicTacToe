@@ -29,6 +29,7 @@ class Game {
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             
             if let value = checkPlayerWinStatus() {
+                print("Array>>",boardArray)
                 return value
             }
             
