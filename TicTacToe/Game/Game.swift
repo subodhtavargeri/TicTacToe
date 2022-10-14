@@ -10,4 +10,8 @@ class Game {
         playerO = Player(name: "O")
         currentPlayer = playerX
     }
+    
+    func playerPlays() {
+        currentPlayer = (currentPlayer == playerX) ? playerO : playerX
+    }
 }
