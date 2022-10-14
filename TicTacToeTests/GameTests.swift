@@ -83,4 +83,15 @@ class GameTests: XCTestCase {
         let expected = "X"
         XCTAssertEqual(originalName, expected)
     }
+    
+    func test_CurrentPlayerNameIsReturnedAsO_WhenBoardArrayIndexIsEmpty() {
+        
+        let index = 4
+        let _ = game.playerPlays(index: 2)
+        
+        let originalName = game.playerPlays(index: index)
+        
+        let expected = "O"
+        XCTAssertEqual(originalName, expected)
+    }
 }
