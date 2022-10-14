@@ -120,8 +120,8 @@ class GameTests: XCTestCase {
     func test_PlayerXWins_WhenPlayerXPositionMatchesRules_0_1_2() {
         
         var original = ""
-        
         let playIndex = [0,4,1,5,2]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -133,8 +133,8 @@ class GameTests: XCTestCase {
     func test_PlayerOWins_WhenPlayerOMatchesRules_3_4_5() {
         
         var original = ""
-        
         let playIndex = [0,3,1,4,8,5]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -146,8 +146,8 @@ class GameTests: XCTestCase {
     func test_PlayerOWins_WhenPlayerOMatchesRules_6_7_8() {
         
         var original = ""
-        
         let playIndex = [0,6,1,7,3,8]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -159,8 +159,8 @@ class GameTests: XCTestCase {
     func test_PlayerXWins_WhenPlayerXMatchesRules_0_3_6() {
         
         var original = ""
-        
         let playIndex = [0,1,3,7,6]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -172,8 +172,8 @@ class GameTests: XCTestCase {
     func test_PlayerXWins_WhenPlayerXMatchesRules_1_4_7() {
         
         var original = ""
-        
         let playIndex = [1,8,4,2,7]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -185,8 +185,8 @@ class GameTests: XCTestCase {
     func test_PlayerOWins_WhenPlayerOMatchesRules_2_5_8() {
         
         var original = ""
-        
         let playIndex = [1,2,4,5,0,3,6,8]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -200,6 +200,7 @@ class GameTests: XCTestCase {
         var original = ""
         
         let playIndex = [1,2,0,5,4,3,8]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -211,8 +212,8 @@ class GameTests: XCTestCase {
     func test_PlayerXWins_WhenPlayerXMatchesRules_InReverseOrder_4_8_0() {
         
         var original = ""
-        
         let playIndex = [4,2,8,5,0]
+        
         for index in 0..<playIndex.count {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
@@ -220,4 +221,5 @@ class GameTests: XCTestCase {
         let expecation = "Player X Wins"
         XCTAssertEqual(original, expecation)
     }
+    
 }
