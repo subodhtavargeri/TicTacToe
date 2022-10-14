@@ -3,7 +3,7 @@ import XCTest
 
 class GameTests: XCTestCase {
     
-    func test_PlayerXIsNameIsSet_WhenGameLoads() {
+    func test_PlayerXNameIsSet_WhenGameLoads() {
         
         let game = Game()
         
@@ -11,7 +11,7 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.playerX.name,expected)
     }
     
-    func test_PlayerOIsNameIsSet_WhenGameLoads() {
+    func test_PlayerONameIsSet_WhenGameLoads() {
         
         let game = Game()
         
