@@ -3,9 +3,9 @@ import XCTest
 
 class GameTests: XCTestCase {
     
+    let game = Game()
+    
     func test_PlayerXNameIsSet_WhenGameLoads() {
-        
-        let game = Game()
         
         let expected = "X"
         XCTAssertEqual(game.playerX.name,expected)
@@ -13,23 +13,17 @@ class GameTests: XCTestCase {
     
     func test_PlayerONameIsSet_WhenGameLoads() {
         
-        let game = Game()
-        
         let expected = "O"
         XCTAssertEqual(game.playerO.name,expected)
     }
     
     func test_CurrentPlayerIsSetToPlayerX_WhenGameLoads() {
         
-        let game = Game()
-        
         let expected = "X"
         XCTAssertEqual(game.currentPlayer.name, expected)
     }
     
     func test_BoardArrayIsEmpty_WhenGameLoads() {
-        
-        let game = Game()
         
         let expected = 0
         XCTAssertEqual(game.boardArray.count, expected)
