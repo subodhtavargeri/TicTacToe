@@ -11,4 +11,12 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.playerX.name,expected)
     }
     
+    func test_PlayerOIsNameIsSet_WhenGameLoads() {
+        
+        let game = Game()
+        
+        let expected = "O"
+        XCTAssertEqual(game.playerO.name,expected)
+    }
+    
 }
