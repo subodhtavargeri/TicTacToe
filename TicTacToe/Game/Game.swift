@@ -1,5 +1,6 @@
 protocol GameProtocol {
     func playerPlays(index: Int)-> String?
+    func getCurrentPlayer()-> Player
 }
 class Game {
     
@@ -55,5 +56,9 @@ class Game {
             return "Game Ends in an Draw!!!"
         }
         return nil
+    }
+    
+    func getCurrentPlayer()-> Player {
+        return currentPlayer
     }
 }

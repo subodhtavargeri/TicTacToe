@@ -250,4 +250,12 @@ class GameTests: XCTestCase {
         let expecation = "Game Ends in an Draw!!!"
         XCTAssertEqual(original, expecation)
     }
+    
+    func test_CurrentPlayerIsSetToPlayerXName_WhenGameLoads() {
+        
+        let original = game.getCurrentPlayer().name
+        
+        let expectation = "X"
+        XCTAssertEqual(original, expectation)
+    }
 }
