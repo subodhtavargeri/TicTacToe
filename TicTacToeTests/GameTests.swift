@@ -8,7 +8,7 @@ class GameTests: XCTestCase {
     func test_PlayerXNameIsSet_WhenGameLoads() {
         
         let expected = "X"
-        XCTAssertEqual(game.playerX.name,expected)
+        XCTAssertEqual(game.currentPlayer.name,expected)
     }
     
     func test_PlayerONameIsSet_WhenGameLoads() {

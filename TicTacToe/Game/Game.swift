@@ -1,9 +1,9 @@
 protocol GameProtocol {
-    func playerPlays(index: Int) -> String?
+    func playerPlays(index: Int)-> String?
 }
 class Game {
     
-    private (set) var playerX: Player
+    private var playerX: Player
     private (set) var playerO: Player
     private (set) var currentPlayer: Player
     private (set) var boardArray = [String]()
@@ -26,7 +26,7 @@ class Game {
         }
     }
     
-    func playerPlays(index: Int) -> String? {
+    func playerPlays(index: Int)-> String? {
         if boardArray[index].isEmpty {
             boardArray[index] = currentPlayer.name
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
@@ -40,7 +40,7 @@ class Game {
         return nil
     }
     
-    private func checkPlayerWinStatus() -> String? {
+    private func checkPlayerWinStatus()-> String? {
         for rule in winningRules {
             let player0 = boardArray[rule[0]]
             let player1 = boardArray[rule[1]]
