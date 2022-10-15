@@ -25,6 +25,7 @@
 		5B48C8C828F9A4130039E410 /* TicTacToeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */; };
 		5B48C8CA28F9A4F00039E410 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */; };
 		5BF2209428FA9BBB00266E8F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2209328FA9BBB00266E8F /* Constant.swift */; };
+		5BF2209628FAA00200266E8F /* TicTacToeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2209528FAA00200266E8F /* TicTacToeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewControllerSpy.swift; sourceTree = "<group>"; };
 		5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		5BF2209328FA9BBB00266E8F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		5BF2209528FAA00200266E8F /* TicTacToeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				5B48C8B928F93EA20039E410 /* GameTests.swift */,
 				5B48C8C328F9A3040039E410 /* TicTacToePresenterTests.swift */,
 				5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */,
+				5BF2209528FAA00200266E8F /* TicTacToeViewControllerTests.swift */,
 			);
 			path = TicTacToeTests;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				5B48C8C828F9A4130039E410 /* TicTacToeViewControllerSpy.swift in Sources */,
 				5B24561728FA8B2300EED22E /* GameSpy.swift in Sources */,
 				5B48C8A128F93C980039E410 /* TicTacToeTests.swift in Sources */,
+				5BF2209628FAA00200266E8F /* TicTacToeViewControllerTests.swift in Sources */,
 				5B48C8BA28F93EA20039E410 /* GameTests.swift in Sources */,
 				5B48C8C428F9A3040039E410 /* TicTacToePresenterTests.swift in Sources */,
 			);
