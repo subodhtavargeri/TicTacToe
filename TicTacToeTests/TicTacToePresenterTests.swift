@@ -5,7 +5,8 @@ class TicTacToePresenterTests: XCTestCase {
     
     func test_ViewTitleIsSet_WhenPresenterLoads() {
         let view = TicTacToeViewControllerSpy()
-        let presenter = TicTacToePresenter(view: view)
+        let game = GameSpy()
+        let presenter = TicTacToePresenter(view: view, game: game)
         
         presenter.loadPresenter()
         

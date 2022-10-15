@@ -5,9 +5,12 @@ protocol TicTacToePresenterProtocol {
 class TicTacToePresenter: TicTacToePresenterProtocol {
     
     private weak var view: TicTacToeViewProtocol?
+    private let game: GameProtocol
     
-    init(view: TicTacToeViewProtocol) {
+    init(view: TicTacToeViewProtocol,
+         game: GameProtocol) {
         self.view = view
+        self.game = game
     }
     
     func loadPresenter() {
