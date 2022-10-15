@@ -8,6 +8,12 @@ protocol TicTacToeViewProtocol: AnyObject {
 class TicTacToeViewController: UIViewController {
     
     let labelCurrentPlayer = UILabel()
+    var presenter: TicTacToePresenterProtocol?
+    
+    func setupPresenter(_presenter: TicTacToePresenterProtocol) {
+        self.presenter = _presenter
+    }
+    
 }
 
 extension TicTacToeViewController: TicTacToeViewProtocol {
