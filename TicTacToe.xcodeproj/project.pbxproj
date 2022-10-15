@@ -24,6 +24,7 @@
 		5B48C8C628F9A3F10039E410 /* TicTacToePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48C8C528F9A3F10039E410 /* TicTacToePresenter.swift */; };
 		5B48C8C828F9A4130039E410 /* TicTacToeViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */; };
 		5B48C8CA28F9A4F00039E410 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */; };
+		5BF2209428FA9BBB00266E8F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2209328FA9BBB00266E8F /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5B48C8C528F9A3F10039E410 /* TicTacToePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToePresenter.swift; sourceTree = "<group>"; };
 		5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewControllerSpy.swift; sourceTree = "<group>"; };
 		5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		5BF2209328FA9BBB00266E8F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,11 +125,12 @@
 		5B48C88828F93C980039E410 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				5B48C8BB28F9404C0039E410 /* Game */,
 				5B48C88928F93C980039E410 /* AppDelegate.swift */,
 				5B48C88B28F93C980039E410 /* SceneDelegate.swift */,
 				5B48C88D28F93C980039E410 /* ViewController.swift */,
 				5B48C88F28F93C980039E410 /* Main.storyboard */,
+				5B48C8BB28F9404C0039E410 /* Game */,
+				5BF2209228FA9BA200266E8F /* Constant */,
 				5B48C89228F93C980039E410 /* Assets.xcassets */,
 				5B48C89428F93C980039E410 /* LaunchScreen.storyboard */,
 				5B48C89728F93C980039E410 /* Info.plist */,
@@ -173,6 +176,14 @@
 				5B48C8BF28F940AA0039E410 /* Player.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5BF2209228FA9BA200266E8F /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2209328FA9BBB00266E8F /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				5B48C88E28F93C980039E410 /* ViewController.swift in Sources */,
 				5B48C88A28F93C980039E410 /* AppDelegate.swift in Sources */,
 				5B48C88C28F93C980039E410 /* SceneDelegate.swift in Sources */,
+				5BF2209428FA9BBB00266E8F /* Constant.swift in Sources */,
 				5B48C8C628F9A3F10039E410 /* TicTacToePresenter.swift in Sources */,
 				5B48C8CA28F9A4F00039E410 /* TicTacToeViewController.swift in Sources */,
 				5B48C8C028F940AA0039E410 /* Player.swift in Sources */,

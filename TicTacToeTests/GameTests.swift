@@ -234,7 +234,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Game Ends in an Draw!!!"
+        let expecation = Constant.Message.drawGame
         XCTAssertEqual(original, expecation)
     }
     
@@ -247,7 +247,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Game Ends in an Draw!!!"
+        let expecation = Constant.Message.drawGame
         XCTAssertEqual(original, expecation)
     }
     

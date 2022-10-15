@@ -53,7 +53,7 @@ class Game {
         }
         
         if !boardArray.contains("") {
-            return "Game Ends in an Draw!!!"
+            return Constant.Message.drawGame
         }
         return nil
     }
