@@ -1,9 +1,10 @@
 protocol TicTacToePresenterProtocol {
     func loadPresenter()
 }
+
 class TicTacToePresenter: TicTacToePresenterProtocol {
     
-    let view: TicTacToeViewProtocol
+    private weak var view: TicTacToeViewProtocol?
     
     init(view: TicTacToeViewProtocol) {
         self.view = view
@@ -14,6 +15,7 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
     }
     
     private func displayTitle() {
-        view.displayTitle(_title: "Tic Tac Toe")
+        view?.displayTitle(_title: "Tic Tac Toe")
     }
+    
 }

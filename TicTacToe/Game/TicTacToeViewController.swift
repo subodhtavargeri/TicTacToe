@@ -1,3 +1,3 @@
-protocol TicTacToeViewProtocol {
+protocol TicTacToeViewProtocol: AnyObject {
     func displayTitle(_title: String)
 }
