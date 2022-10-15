@@ -26,6 +26,7 @@
 		5B48C8CA28F9A4F00039E410 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */; };
 		5BF2209428FA9BBB00266E8F /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2209328FA9BBB00266E8F /* Constant.swift */; };
 		5BF2209628FAA00200266E8F /* TicTacToeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2209528FAA00200266E8F /* TicTacToeViewControllerTests.swift */; };
+		5BF2209A28FAA45E00266E8F /* TicTacToePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2209928FAA45E00266E8F /* TicTacToePresenterSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
 		5BF2209328FA9BBB00266E8F /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5BF2209528FAA00200266E8F /* TicTacToeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewControllerTests.swift; sourceTree = "<group>"; };
+		5BF2209928FAA45E00266E8F /* TicTacToePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToePresenterSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				5B24561628FA8B2300EED22E /* GameSpy.swift */,
+				5BF2209928FAA45E00266E8F /* TicTacToePresenterSpy.swift */,
 			);
 			path = Spy;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				5BF2209628FAA00200266E8F /* TicTacToeViewControllerTests.swift in Sources */,
 				5B48C8BA28F93EA20039E410 /* GameTests.swift in Sources */,
 				5B48C8C428F9A3040039E410 /* TicTacToePresenterTests.swift in Sources */,
+				5BF2209A28FAA45E00266E8F /* TicTacToePresenterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,6 @@
 protocol TicTacToePresenterProtocol {
     func loadPresenter()
+    func playerClickEvent(index: Int)->String?
 }
 
 class TicTacToePresenter: TicTacToePresenterProtocol {
