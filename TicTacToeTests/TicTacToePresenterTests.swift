@@ -24,4 +24,15 @@ class TicTacToePresenterTests: XCTestCase {
         let expecation = "X"
         XCTAssertEqual(view.playerName, expecation)
     }
+    
+    func test_PlayerNameOIsReturned_WhenPlayerPlays() {
+        let view = TicTacToeViewControllerSpy()
+        let game = GameSpy()
+        let presenter = TicTacToePresenter(view: view, game: game)
+        
+        let original = presenter.playerClickEvent(index: 1)
+        
+        let expecation = "O"
+        XCTAssertEqual(original, expecation)
+    }
 }

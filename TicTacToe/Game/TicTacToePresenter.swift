@@ -26,4 +26,8 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
         let playerName = game.getCurrentPlayer().name
         view?.displayCurrentPlayerName(playerName: playerName)
     }
+    
+    func playerClickEvent(index: Int)->String? {
+        return game.playerPlays(index: index)
+    }
 }

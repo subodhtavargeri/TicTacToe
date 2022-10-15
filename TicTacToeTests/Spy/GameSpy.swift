@@ -3,7 +3,7 @@
 class GameSpy: GameProtocol {
     
     func playerPlays(index: Int) -> String? {
-        return ""
+        return "O"
     }
     
     func getCurrentPlayer() -> Player {
