@@ -11,4 +11,13 @@ class TicTacToeViewControllerTests: XCTestCase {
         let expectation = Constant.Title.screenTitle
         XCTAssertEqual(view.title, expectation)
     }
+    
+    func test_CurrentPlayerLabelIsDisplayed_WhenCurrentPlayerIsVisible() {
+        let view = TicTacToeViewController()
+        
+        view.displayCurrentPlayerName(playerName: "X")
+        
+        let expectation = "X"
+        XCTAssertEqual(view.labelCurrentPlayer.text, expectation)
+    }
 }

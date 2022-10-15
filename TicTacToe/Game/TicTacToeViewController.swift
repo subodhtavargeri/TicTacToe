@@ -7,6 +7,7 @@ protocol TicTacToeViewProtocol: AnyObject {
 
 class TicTacToeViewController: UIViewController {
     
+    let labelCurrentPlayer = UILabel()
 }
 
 extension TicTacToeViewController: TicTacToeViewProtocol {
@@ -16,7 +17,7 @@ extension TicTacToeViewController: TicTacToeViewProtocol {
     }
     
     func displayCurrentPlayerName(playerName: String) {
-        
+        labelCurrentPlayer.text = playerName
     }
     
 }
