@@ -4,7 +4,7 @@ protocol GameProtocol {
 class Game {
     
     private var playerX: Player
-    private (set) var playerO: Player
+    private var playerO: Player
     private (set) var currentPlayer: Player
     private (set) var boardArray = [String]()
     

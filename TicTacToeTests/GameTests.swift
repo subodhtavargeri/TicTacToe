@@ -11,10 +11,12 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.currentPlayer.name,expected)
     }
     
-    func test_PlayerONameIsSet_WhenGameLoads() {
+    func test_PlayerONameIsSet_WhenPlayerXTurnIsFinished() {
+        
+        let _ = game.playerPlays(index: 0)
         
         let expected = "O"
-        XCTAssertEqual(game.playerO.name,expected)
+        XCTAssertEqual(game.currentPlayer.name,expected)
     }
     
     func test_CurrentPlayerIsSetToPlayerX_WhenGameLoads() {

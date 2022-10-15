@@ -14,8 +14,8 @@
             filePath = "TicTacToeTests/GameTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "test_PlayerXWins_WhenAnyPlayerMatchesRules_2_4_6()"
             landmarkType = "7">
             <Locations>
@@ -93,8 +93,8 @@
             filePath = "TicTacToeTests/GameTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "test_PlayerXWins_WhenPlayerXPositionMatchesRules_0_1_2()"
             landmarkType = "7">
             <Locations>
