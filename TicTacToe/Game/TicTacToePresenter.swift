@@ -19,7 +19,7 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
     }
     
     private func displayTitle() {
-        view?.displayTitle(_title: "Tic Tac Toe")
+        view?.displayTitle(_title: Constant.Title.screenTitle)
     }
     
     private func displayCurrentPlayer() {

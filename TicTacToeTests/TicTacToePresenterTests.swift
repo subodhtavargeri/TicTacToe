@@ -10,7 +10,7 @@ class TicTacToePresenterTests: XCTestCase {
         
         presenter.loadPresenter()
         
-        let expectation = "Tic Tac Toe"
+        let expectation = Constant.Title.screenTitle
         XCTAssertEqual(view.title, expectation)
     }
     
