@@ -3,6 +3,7 @@
 
 class TicTacToeViewControllerSpy: TicTacToeViewProtocol {
     
+    
     var title: String?
     var playerName: String?
     
@@ -13,4 +14,9 @@ class TicTacToeViewControllerSpy: TicTacToeViewProtocol {
     func displayCurrentPlayerName(playerName: String) {
         self.playerName = playerName
     }
+    
+    func setButtonTitle(title: String) {
+        self.title = title
+    }
+    
 }

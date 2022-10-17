@@ -27,11 +27,12 @@ class TicTacToePresenterTests: XCTestCase {
         XCTAssertEqual(view.playerName, expecation)
     }
     
-    func test_PlayerNameOIsReturned_WhenPlayerPlays() {
+    func test_CurrentPlayerNameIsSetToO_WhenPlayerXFinishesPlaying() {
         
-        let original = presenter?.playerClickEvent(index: 1)
+        presenter?.playerClickEvent(index: 1)
         
         let expecation = "O"
-        XCTAssertEqual(original, expecation)
+        XCTAssertEqual(view.playerName, expecation)
     }
+    
 }

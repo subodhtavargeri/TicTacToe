@@ -2,12 +2,12 @@
 
 class TicTacToePresenterSpy: TicTacToePresenterProtocol {
     
-    func loadPresenter() {
+    func playerClickEvent(index: Int) {
         
     }
     
-    func playerClickEvent(index: Int) -> String? {
-        return "O"
+    func loadPresenter() {
+        
     }
     
 }
