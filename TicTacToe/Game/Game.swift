@@ -3,7 +3,7 @@ protocol GameProtocol {
     func getCurrentPlayer()-> Player
     func isGameFinished()-> Bool
 }
-class Game {
+class Game: GameProtocol {
     
     private var playerX: Player
     private var playerO: Player
