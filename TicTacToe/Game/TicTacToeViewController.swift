@@ -15,6 +15,9 @@ class TicTacToeViewController: UIViewController {
     func setupPresenter(_presenter: TicTacToePresenterProtocol) {
         self.presenter = _presenter
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     @IBAction func buttonAction(_ sender: UIButton) {
         senderButton = sender

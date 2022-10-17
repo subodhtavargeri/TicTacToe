@@ -1,7 +1,7 @@
 import UIKit
 
 protocol RouterProtocol {
-    func routeToPlayerTimer()
+    func routeToTicTacToeController()
 }
 
 class TicTacToeRouter: RouterProtocol {
@@ -13,8 +13,9 @@ class TicTacToeRouter: RouterProtocol {
     }
     
     
-    func routeToPlayerTimer() {
-        
+    func routeToTicTacToeController() {
+        let view = TicTacToeFactory.create(router: self)
+        navigationController.setViewControllers([view], animated: true)
     }
     
 }
