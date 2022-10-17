@@ -1,6 +1,6 @@
 protocol TicTacToePresenterProtocol {
     func loadPresenter()
-    func playerClickEvent(index: Int)->String?
+    func playerClickEvent(index: Int)-> String?
 }
 
 class TicTacToePresenter: TicTacToePresenterProtocol {
@@ -28,7 +28,7 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
         view?.displayCurrentPlayerName(playerName: playerName)
     }
     
-    func playerClickEvent(index: Int)->String? {
+    func playerClickEvent(index: Int)-> String? {
         return game.playerPlays(index: index)
     }
 }
