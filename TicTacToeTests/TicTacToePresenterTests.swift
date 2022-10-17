@@ -3,34 +3,33 @@ import XCTest
 
 class TicTacToePresenterTests: XCTestCase {
     
+    let view = TicTacToeViewControllerSpy()
+    let game = GameSpy()
+    var presenter:TicTacToePresenter?
+    
+    override func setUp()  {
+        presenter = TicTacToePresenter(view: view, game: game)
+    }
+    
     func test_ViewTitleIsSet_WhenPresenterLoads() {
-        let view = TicTacToeViewControllerSpy()
-        let game = GameSpy()
-        let presenter = TicTacToePresenter(view: view, game: game)
         
-        presenter.loadPresenter()
+        presenter?.loadPresenter()
         
         let expectation = Constant.Title.screenTitle
         XCTAssertEqual(view.title, expectation)
     }
     
     func test_CurrentPlayerNameIsSetToX_WhenGameLoads() {
-        let view = TicTacToeViewControllerSpy()
-        let game = GameSpy()
-        let presenter = TicTacToePresenter(view: view, game: game)
         
-        presenter.loadPresenter()
+        presenter?.loadPresenter()
         
         let expecation = "X"
         XCTAssertEqual(view.playerName, expecation)
     }
     
     func test_PlayerNameOIsReturned_WhenPlayerPlays() {
-        let view = TicTacToeViewControllerSpy()
-        let game = GameSpy()
-        let presenter = TicTacToePresenter(view: view, game: game)
         
-        let original = presenter.playerClickEvent(index: 1)
+        let original = presenter?.playerClickEvent(index: 1)
         
         let expecation = "O"
         XCTAssertEqual(original, expecation)
