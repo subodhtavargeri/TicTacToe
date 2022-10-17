@@ -10,7 +10,7 @@ class GameTests: XCTestCase {
     func test_PlayerXNameIsSet_WhenGameLoads() {
         
         let expected = playerX
-        XCTAssertEqual(game.currentPlayer.name,expected)
+        XCTAssertEqual(game.getCurrentPlayer().name,expected)
     }
     
     func test_PlayerONameIsSet_WhenPlayerXTurnIsFinished() {
@@ -18,13 +18,13 @@ class GameTests: XCTestCase {
         let _ = game.playerPlays(index: 0)
         
         let expected = playerO
-        XCTAssertEqual(game.currentPlayer.name,expected)
+        XCTAssertEqual(game.getCurrentPlayer().name,expected)
     }
     
     func test_CurrentPlayerIsSetToPlayerX_WhenGameLoads() {
         
         let expected = playerX
-        XCTAssertEqual(game.currentPlayer.name, expected)
+        XCTAssertEqual(game.getCurrentPlayer().name, expected)
     }
     
     func test_BoardArrayCountIsNine_WhenGameLoads() {
@@ -38,7 +38,7 @@ class GameTests: XCTestCase {
         let _ = game.playerPlays(index: 0)
         let expected = playerO
         
-        XCTAssertEqual(game.currentPlayer.name, expected)
+        XCTAssertEqual(game.getCurrentPlayer().name, expected)
     }
     
     func test_CurrentPlayerIsChangedToPlayerX_WhenPlayerOTurnIsDone() {
@@ -47,7 +47,7 @@ class GameTests: XCTestCase {
         let _ = game.playerPlays(index: 1)
         
         let expected = playerX
-        XCTAssertEqual(game.currentPlayer.name, expected)
+        XCTAssertEqual(game.getCurrentPlayer().name, expected)
     }
     
     func test_NewValueIsInsertedIntoBoardArrayAtIndex_IfIndexIsEmptyAtBoardValue() {
@@ -76,7 +76,7 @@ class GameTests: XCTestCase {
         let _ = game.playerPlays(index: index)
         
         let expected = playerO
-        XCTAssertEqual(game.currentPlayer.name, expected)
+        XCTAssertEqual(game.getCurrentPlayer().name, expected)
     }
     
     func test_CurrentPlayerNameIsReturned_WhenBoardArrayIndexIsEmpty() {

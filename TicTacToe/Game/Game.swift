@@ -6,7 +6,7 @@ class Game {
     
     private var playerX: Player
     private var playerO: Player
-    private (set) var currentPlayer: Player
+    private var currentPlayer: Player
     private (set) var boardArray = [String]()
     private (set) var gameFinished = false
     
