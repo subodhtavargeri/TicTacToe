@@ -48,7 +48,7 @@ class Game {
             let player2 = boardArray[rule[2]]
             
             if player0 == player1 && player2 == player1 && !player0.isEmpty {
-                return "Player \(player0) Wins"
+                return player0
             }
         }
         

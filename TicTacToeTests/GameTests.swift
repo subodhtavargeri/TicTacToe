@@ -115,7 +115,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: index) ?? ""
         }
         
-        let expecation = "Player X Wins"
+        let expecation = "X"
         XCTAssertEqual(original, expecation)
     }
     
@@ -128,7 +128,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player X Wins"
+        let expecation = "X"
         XCTAssertEqual(original, expecation)
     }
     
@@ -141,7 +141,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player O Wins"
+        let expecation = "O"
         XCTAssertEqual(original, expecation)
     }
     
@@ -154,7 +154,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player O Wins"
+        let expecation = "O"
         XCTAssertEqual(original, expecation)
     }
     
@@ -167,7 +167,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player X Wins"
+        let expecation = "X"
         XCTAssertEqual(original, expecation)
     }
     
@@ -180,7 +180,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player X Wins"
+        let expecation = "X"
         XCTAssertEqual(original, expecation)
     }
     
@@ -193,7 +193,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player O Wins"
+        let expecation = "O"
         XCTAssertEqual(original, expecation)
     }
     
@@ -207,7 +207,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player X Wins"
+        let expecation = "X"
         XCTAssertEqual(original, expecation)
     }
     
@@ -220,7 +220,7 @@ class GameTests: XCTestCase {
             original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
-        let expecation = "Player X Wins"
+        let expecation = "X"
         XCTAssertEqual(original, expecation)
     }
     
