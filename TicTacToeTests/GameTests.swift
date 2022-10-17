@@ -265,4 +265,26 @@ class GameTests: XCTestCase {
         
         XCTAssertFalse(game.isGameFinished())
     }
+    
+    func test_GameFinishedStatusIsTrue_WhenPlayerXWins_0_1_2() {
+        
+        let playIndex = [0,4,1,5,2]
+        
+        for index in 0..<playIndex.count {
+            _ = game.playerPlays(index: playIndex[index]) ?? ""
+        }
+        
+        XCTAssertTrue(game.isGameFinished())
+    }
+    
+    func test_GameFinishedStatusIsTrue_WhenPlayerXWins_InReverseOrder_4_8_0() {
+        
+        let playIndex = [4,2,8,5,0]
+        
+        for index in 0..<playIndex.count {
+            _ = game.playerPlays(index: playIndex[index]) ?? ""
+        }
+        
+        XCTAssertTrue(game.isGameFinished())
+    }
 }
