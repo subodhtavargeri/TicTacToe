@@ -1,9 +1,9 @@
 @testable import TicTacToe
 
 class GameSpy: GameProtocol {
-  
-    func playerPlays(index: Int) -> String? {
-        return  (index == 1) ? "O" : "X"
+    
+    func playerPlays(index: Int) -> (String?, Bool) {
+        return  (index == 1) ? ("O",true) : ("X",false)
     }
     
     func getCurrentPlayer() -> Player {

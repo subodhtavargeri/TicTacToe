@@ -1,5 +1,5 @@
 protocol GameProtocol {
-    func playerPlays(index: Int)-> String?
+    func playerPlays(index: Int)-> (String?,Bool)
     func getCurrentPlayer()-> Player
     func isGameFinished()-> Bool
 }
@@ -29,7 +29,7 @@ class Game {
         }
     }
     
-    func playerPlays(index: Int)-> String? {
+    func playerPlays(index: Int)-> (String?,Bool) {
         
         if boardArray[index].isEmpty && !gameFinished {
             boardArray[index] = currentPlayer.name
@@ -37,12 +37,12 @@ class Game {
             
             if let value = checkPlayerWinStatus() {
                 gameFinished = true
-                return value
+                return (value,gameFinished)
             }
             
-            return boardArray[index]
+            return (boardArray[index],gameFinished)
         }
-        return nil
+        return (nil,gameFinished)
     }
     
     private func checkPlayerWinStatus()-> String? {

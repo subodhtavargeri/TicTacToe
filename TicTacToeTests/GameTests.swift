@@ -85,7 +85,7 @@ class GameTests: XCTestCase {
         let originalName = game.playerPlays(index: index)
         
         let expected = playerX
-        XCTAssertEqual(originalName, expected)
+        XCTAssertEqual(originalName.0, expected)
     }
     
     func test_CurrentPlayerNameIsReturnedAsO_WhenBoardArrayIndexIsEmpty() {
@@ -96,7 +96,7 @@ class GameTests: XCTestCase {
         let originalName = game.playerPlays(index: index)
         
         let expected = playerO
-        XCTAssertEqual(originalName, expected)
+        XCTAssertEqual(originalName.0, expected)
     }
     
     func test_CurrentPlayerNameIsReturnedAsNil_WhenBoardArrayIndexHasValue() {
@@ -104,7 +104,7 @@ class GameTests: XCTestCase {
         let index = 2
         let _ = game.playerPlays(index: 2)
         
-        let originalName = game.playerPlays(index: index)
+        let originalName = game.playerPlays(index: index).0
         
         XCTAssertNil(originalName)
     }
@@ -115,7 +115,7 @@ class GameTests: XCTestCase {
         let playIndex = [2,1,4,5,6]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerX
@@ -128,7 +128,7 @@ class GameTests: XCTestCase {
         let playIndex = [0,4,1,5,2]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerX
@@ -141,7 +141,7 @@ class GameTests: XCTestCase {
         let playIndex = [0,3,1,4,8,5]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerO
@@ -154,7 +154,7 @@ class GameTests: XCTestCase {
         let playIndex = [0,6,1,7,3,8]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerO
@@ -167,7 +167,7 @@ class GameTests: XCTestCase {
         let playIndex = [0,1,3,7,6]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerX
@@ -180,7 +180,7 @@ class GameTests: XCTestCase {
         let playIndex = [1,8,4,2,7]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerX
@@ -193,7 +193,7 @@ class GameTests: XCTestCase {
         let playIndex = [1,2,4,5,0,3,6,8]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerO
@@ -207,7 +207,7 @@ class GameTests: XCTestCase {
         let playIndex = [1,2,0,5,4,3,8]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerX
@@ -220,7 +220,7 @@ class GameTests: XCTestCase {
         let playIndex = [4,2,8,5,0]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = playerX
@@ -234,7 +234,7 @@ class GameTests: XCTestCase {
         let playIndex = [0,1,2,4,7,3,5,8,6]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = Constant.Message.drawGame
@@ -247,7 +247,7 @@ class GameTests: XCTestCase {
         let playIndex = [2,4,8,5,3,1,7,6,0]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]) ?? ""
+            original = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         let expecation = Constant.Message.drawGame
@@ -272,7 +272,7 @@ class GameTests: XCTestCase {
         let playIndex = [0,4,1,5,2]
         
         for index in 0..<playIndex.count {
-            _ = game.playerPlays(index: playIndex[index]) ?? ""
+            _ = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         XCTAssertTrue(game.isGameFinished())
@@ -283,7 +283,7 @@ class GameTests: XCTestCase {
         let playIndex = [4,2,8,5,0]
         
         for index in 0..<playIndex.count {
-            _ = game.playerPlays(index: playIndex[index]) ?? ""
+            _ = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
         XCTAssertTrue(game.isGameFinished())

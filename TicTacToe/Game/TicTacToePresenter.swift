@@ -30,8 +30,18 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
     
     func playerClickEvent(index: Int) {
         
-        if let currentPlayerName = game.playerPlays(index: index) {
-            view?.displayCurrentPlayerName(playerName: currentPlayerName)
+        let clickData = game.playerPlays(index: index)
+        
+        if let title = clickData.0 {
+            view?.setButtonTitle(title: title)
+            
+            let gameStatus = clickData.1
+            
+            if gameStatus {
+                let message = "Player \(title) Wins"
+                view?.displayCurrentPlayerName(playerName: message)
+                return
+            }
         }
     }
 }
