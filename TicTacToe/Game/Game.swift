@@ -8,6 +8,7 @@ class Game {
     private var playerO: Player
     private (set) var currentPlayer: Player
     private (set) var boardArray = [String]()
+    private (set) var gameFinished = false
     
     let winningRules = [[0,1,2],[3,4,5],
                         [6,7,8],[0,3,6],
@@ -33,6 +34,7 @@ class Game {
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             
             if let value = checkPlayerWinStatus() {
+                gameFinished = true
                 return value
             }
             
@@ -42,6 +44,7 @@ class Game {
     }
     
     private func checkPlayerWinStatus()-> String? {
+        
         for rule in winningRules {
             let player0 = boardArray[rule[0]]
             let player1 = boardArray[rule[1]]

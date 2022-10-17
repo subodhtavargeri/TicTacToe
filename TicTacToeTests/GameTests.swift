@@ -260,4 +260,9 @@ class GameTests: XCTestCase {
         let expectation = playerX
         XCTAssertEqual(original, expectation)
     }
+    
+    func test_GameFinishedIsFalse_WhenGameLoads() {
+        
+        XCTAssertFalse(game.gameFinished)
+    }
 }
