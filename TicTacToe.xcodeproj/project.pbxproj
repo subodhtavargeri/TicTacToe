@@ -139,7 +139,6 @@
 				5B48C89228F93C980039E410 /* Assets.xcassets */,
 				5B48C89428F93C980039E410 /* LaunchScreen.storyboard */,
 				5B48C89728F93C980039E410 /* Info.plist */,
-				5B4C708328FD698B00BAD287 /* StoryBoard.storyboard */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -175,6 +174,7 @@
 				5B48C8C528F9A3F10039E410 /* TicTacToePresenter.swift */,
 				5B48C8C928F9A4F00039E410 /* TicTacToeViewController.swift */,
 				5B4C708128FD652E00BAD287 /* TicTacToeFactory.swift */,
+				5B4C708328FD698B00BAD287 /* StoryBoard.storyboard */,
 			);
 			path = Game;
 			sourceTree = "<group>";
