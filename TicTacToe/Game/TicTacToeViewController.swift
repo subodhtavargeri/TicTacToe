@@ -8,7 +8,9 @@ protocol TicTacToeViewProtocol: AnyObject {
 
 class TicTacToeViewController: UIViewController {
     
-    let labelCurrentPlayer = UILabel()
+    @IBOutlet var buttonBoxes: [UIButton]!
+    @IBOutlet weak var labelCurrentPlayer: UILabel!
+    
     var presenter: TicTacToePresenterProtocol?
     private (set) var senderButton: UIButton?
     

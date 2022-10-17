@@ -3,35 +3,52 @@ import XCTest
 
 class TicTacToeViewControllerTests: XCTestCase {
     
+    var view: TicTacToeViewController?
+    
+    override func setUp() {
+        
+        guard let controller = UIStoryboard(name: "StoryBoard", bundle: .main).instantiateViewController(withIdentifier: "TicTacToeViewController") as? TicTacToeViewController else {
+            fatalError("Unable to Instantiate TicTacToeViewController")
+        }
+        
+        self.view = controller
+        let presenter = TicTacToePresenterSpy()
+        view?.setupPresenter(_presenter: presenter)
+        _ = self.view?.view
+    }
+    
     func test_ViewTitleIsSet_WhenViewLoads() {
         
-        let view = TicTacToeViewController()
-        
-        view.displayTitle(_title: Constant.Title.screenTitle)
+        view?.displayTitle(_title: Constant.Title.screenTitle)
         
         let expectation = Constant.Title.screenTitle
-        XCTAssertEqual(view.title, expectation)
+        XCTAssertEqual(view?.title, expectation)
     }
     
     func test_CurrentPlayerLabelIsDisplayed_WhenCurrentPlayerIsVisible() {
         
-        let view = TicTacToeViewController()
-        
-        view.displayCurrentPlayerName(playerName: "X")
+        view?.displayCurrentPlayerName(playerName: "X")
         
         let expectation = "X"
-        XCTAssertEqual(view.labelCurrentPlayer.text, expectation)
+        XCTAssertEqual(view?.labelCurrentPlayer.text, expectation)
     }
     
     func test_PlayerButtonTitleIsSet_WhenPlayerClicksOnButton() {
         
-        let view = TicTacToeViewController()
-        view.buttonAction(UIButton())
+        view?.buttonAction(UIButton())
         
-        view.setButtonTitle(title: "X")
-        let orginal = view.senderButton?.title(for: .normal)
+        view?.setButtonTitle(title: "X")
+        let orginal = view?.senderButton?.title(for: .normal)
         
         let expectation = "X"
         XCTAssertEqual(orginal, expectation)
+    }
+    
+    func test_PlayerNameXIsDisplayed_WhenCurrentPlayerNameIsSet() {
+        
+        view?.displayCurrentPlayerName(playerName: "X")
+        
+        let expectation = "X"
+        XCTAssertEqual(view?.labelCurrentPlayer.text, expectation)
     }
 }

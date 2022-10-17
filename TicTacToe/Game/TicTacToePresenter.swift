@@ -42,6 +42,7 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
                 view?.displayCurrentPlayerName(playerName: message)
                 return
             }
+            displayCurrentPlayer()
         }
     }
 }
