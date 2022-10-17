@@ -263,6 +263,6 @@ class GameTests: XCTestCase {
     
     func test_GameFinishedIsFalse_WhenGameLoads() {
         
-        XCTAssertFalse(game.gameFinished)
+        XCTAssertFalse(game.isGameFinished())
     }
 }

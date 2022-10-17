@@ -1,6 +1,7 @@
 protocol GameProtocol {
     func playerPlays(index: Int)-> String?
     func getCurrentPlayer()-> Player
+    func isGameFinished()-> Bool
 }
 class Game {
     
@@ -8,12 +9,12 @@ class Game {
     private var playerO: Player
     private var currentPlayer: Player
     private (set) var boardArray = [String]()
-    private (set) var gameFinished = false
+    private var gameFinished = false
     
     private let winningRules = [[0,1,2],[3,4,5],
-                        [6,7,8],[0,3,6],
-                        [1,4,7],[2,5,8],
-                        [0,4,8],[2,4,6]]
+                                [6,7,8],[0,3,6],
+                                [1,4,7],[2,5,8],
+                                [0,4,8],[2,4,6]]
     
     init() {
         playerX = Player(name: "X")
@@ -63,5 +64,9 @@ class Game {
     
     func getCurrentPlayer()-> Player {
         return currentPlayer
+    }
+    
+    func isGameFinished()-> Bool {
+        return gameFinished
     }
 }
