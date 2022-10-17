@@ -30,7 +30,8 @@ class Game {
     }
     
     func playerPlays(index: Int)-> String? {
-        if boardArray[index].isEmpty {
+        
+        if boardArray[index].isEmpty && !gameFinished {
             boardArray[index] = currentPlayer.name
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             

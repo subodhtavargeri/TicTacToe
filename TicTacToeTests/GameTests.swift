@@ -112,9 +112,10 @@ class GameTests: XCTestCase {
     func test_PlayerXWins_WhenAnyPlayerMatchesRules_2_4_6() {
         
         var original = ""
+        let playIndex = [2,1,4,5,6]
         
-        for index in 0..<game.boardArray.count {
-            original = game.playerPlays(index: index) ?? ""
+        for index in 0..<playIndex.count {
+            original = game.playerPlays(index: playIndex[index]) ?? ""
         }
         
         let expecation = playerX
@@ -287,4 +288,5 @@ class GameTests: XCTestCase {
         
         XCTAssertTrue(game.isGameFinished())
     }
+    
 }

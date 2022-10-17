@@ -3,7 +3,7 @@
 class GameSpy: GameProtocol {
   
     func playerPlays(index: Int) -> String? {
-        return "O"
+        return  (index == 1) ? "O" : "X"
     }
     
     func getCurrentPlayer() -> Player {
@@ -11,7 +11,7 @@ class GameSpy: GameProtocol {
     }
     
     func isGameFinished() -> Bool {
-        return true
+        return false
     }
     
 }

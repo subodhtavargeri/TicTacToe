@@ -29,6 +29,10 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
     }
     
     func playerClickEvent(index: Int) {
+        if game.isGameFinished() {
+            return
+        }
+        
         if let currentPlayerName = game.playerPlays(index: index) {
             view?.displayCurrentPlayerName(playerName: currentPlayerName)
         }
