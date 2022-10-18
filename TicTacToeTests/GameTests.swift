@@ -292,4 +292,16 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.isGameFinished(),expectation)
     }
     
+    func test_GameStatusIsDraw_WhenThereIsNoEmptyBlockToBeFilled() {
+        
+        let playIndex = [0,1,2,4,7,3,5,8,6]
+        
+        for index in 0..<playIndex.count {
+            _ = game.playerPlays(index: playIndex[index]).0 ?? ""
+        }
+        
+        let expecation = Constant.GameStatus.draw
+        XCTAssertEqual(game.isGameFinished(), expecation)
+    }
+    
 }

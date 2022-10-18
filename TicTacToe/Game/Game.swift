@@ -36,7 +36,6 @@ class Game: GameProtocol {
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             
             if let value = checkPlayerWinStatus() {
-                gameFinished = .finished
                 return (value,gameFinished)
             }
             
