@@ -8,7 +8,7 @@ class GameSpy: GameProtocol {
         return (index == 1) ? ("Player O Wins!!!",.finished) : (Constant.Message.drawGame,.draw)
     }
     
-    func isGameFinished() -> Constant.GameStatus {
+    func getGameStatus() -> Constant.GameStatus {
         return .finished
     }
     

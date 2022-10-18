@@ -1,7 +1,7 @@
 protocol GameProtocol {
     func playerPlays(index: Int)-> (String?,Constant.GameStatus)
     func getCurrentPlayer()-> Player
-    func isGameFinished()-> Constant.GameStatus
+    func getGameStatus()-> Constant.GameStatus
     func resetGame()
 }
 class Game: GameProtocol {
@@ -10,7 +10,7 @@ class Game: GameProtocol {
     private var playerO: Player
     private var currentPlayer: Player
     private (set) var boardArray = [String]()
-    private var gameFinished: Constant.GameStatus = .running
+    private var gameStatus: Constant.GameStatus = .running
     
     private let winningRules = [[0,1,2],[3,4,5],
                                 [6,7,8],[0,3,6],
@@ -32,17 +32,17 @@ class Game: GameProtocol {
     
     func playerPlays(index: Int)-> (String?,Constant.GameStatus) {
         
-        if boardArray[index].isEmpty && gameFinished == .running {
+        if boardArray[index].isEmpty && gameStatus == .running {
             boardArray[index] = currentPlayer.name
             
             if let value = checkPlayerWinStatus() {
-                return (value,gameFinished)
+                return (value,gameStatus)
             }
             
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
-            return (boardArray[index],gameFinished)
+            return (boardArray[index],gameStatus)
         }
-        return (nil,gameFinished)
+        return (nil,gameStatus)
     }
     
     private func checkPlayerWinStatus()-> String? {
@@ -53,14 +53,14 @@ class Game: GameProtocol {
             let player2 = boardArray[rule[2]]
             
             if checkIfAnyPlayerMatchesAsPerRule(player0: player0, player1: player1, player2: player2) {
-                gameFinished = .finished
+                gameStatus = .finished
                 let message = String(format: Constant.Message.playerWins, arguments: [player0])
                 return message
             }
         }
         
         if !boardArray.contains("") {
-            gameFinished = .draw
+            gameStatus = .draw
             return Constant.Message.drawGame
         }
         return nil
@@ -77,13 +77,13 @@ class Game: GameProtocol {
         return currentPlayer
     }
     
-    func isGameFinished()-> Constant.GameStatus {
-        return gameFinished
+    func getGameStatus()-> Constant.GameStatus {
+        return gameStatus
     }
     
     func resetGame() {
         boardArray.removeAll()
-        gameFinished = .running
+        gameStatus = .running
         currentPlayer = playerX
         setUpBoardArray()
     }

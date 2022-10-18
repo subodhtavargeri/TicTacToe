@@ -20,7 +20,6 @@ class TicTacToeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.loadPresenter()
-        
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {

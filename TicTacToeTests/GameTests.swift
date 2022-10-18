@@ -237,7 +237,7 @@ class GameTests: XCTestCase {
         }
         
         let expecation = Constant.GameStatus.draw
-        XCTAssertEqual(game.isGameFinished(), expecation)
+        XCTAssertEqual(game.getGameStatus(), expecation)
     }
     
     func test_GameStatusIsDrawn_WhenThereIsNoEmptyBlockToBeFilled_WithDifferentCombination() {
@@ -249,7 +249,7 @@ class GameTests: XCTestCase {
         }
         
         let expecation = Constant.GameStatus.draw
-        XCTAssertEqual(game.isGameFinished(), expecation)
+        XCTAssertEqual(game.getGameStatus(), expecation)
     }
     
     func test_CurrentPlayerIsSetToPlayerXName_WhenGameLoads() {
@@ -263,7 +263,7 @@ class GameTests: XCTestCase {
     func test_GameFinishedIsRunning_WhenGameLoads() {
         
         let expectation = Constant.GameStatus.running
-        XCTAssertEqual(game.isGameFinished(),expectation)
+        XCTAssertEqual(game.getGameStatus(),expectation)
     }
     
     func test_GameFinishedStatusIsFinished_WhenPlayerXWins_0_1_2() {
@@ -275,7 +275,7 @@ class GameTests: XCTestCase {
         }
         
         let expectation = Constant.GameStatus.finished
-        XCTAssertEqual(game.isGameFinished(),expectation)
+        XCTAssertEqual(game.getGameStatus(),expectation)
     }
     
     func test_GameFinishedStatusIsFinished_WhenPlayerXWins_InReverseOrder_4_8_0() {
@@ -287,7 +287,7 @@ class GameTests: XCTestCase {
         }
         
         let expectation = Constant.GameStatus.finished
-        XCTAssertEqual(game.isGameFinished(),expectation)
+        XCTAssertEqual(game.getGameStatus(),expectation)
     }
     
     func test_GameStatusIsDraw_WhenThereIsNoEmptyBlockToBeFilled() {
@@ -299,14 +299,14 @@ class GameTests: XCTestCase {
         }
         
         let expecation = Constant.GameStatus.draw
-        XCTAssertEqual(game.isGameFinished(), expecation)
+        XCTAssertEqual(game.getGameStatus(), expecation)
     }
     
     func test_GameStatusIsResetToRunning_WhenGameIsReset() {
         
         game.resetGame()
         
-        XCTAssertEqual(game.isGameFinished(), .running)
+        XCTAssertEqual(game.getGameStatus(), .running)
     }
     
     func test_BoardArrayIsResetToEmpty_WhenGameIsReset() {
