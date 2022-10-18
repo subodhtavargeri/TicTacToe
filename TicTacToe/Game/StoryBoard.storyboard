@@ -179,13 +179,28 @@
                                     <constraint firstItem="6RG-dq-uU8" firstAttribute="top" secondItem="bMX-3l-XsS" secondAttribute="top" id="zDi-Ba-9BB"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-Zd-Rqe" userLabel="Reset">
+                                <rect key="frame" x="0.0" y="806" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZA1-zg-Rrt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="resetGame" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8hB-8I-CQ4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="LxY-Zd-Rqe" secondAttribute="bottom" constant="16" id="0bk-Ux-kVj"/>
                             <constraint firstItem="A1h-tM-rzL" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Mdf-bZ-AdA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LxY-Zd-Rqe" secondAttribute="trailing" id="UjG-3Z-0z5"/>
                             <constraint firstItem="A1h-tM-rzL" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="We1-ng-Kjt"/>
                             <constraint firstItem="pTC-2F-e8c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aBI-ym-g28"/>
+                            <constraint firstItem="LxY-Zd-Rqe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aSi-ZS-pHP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pTC-2F-e8c" secondAttribute="trailing" id="f20-mG-gfA"/>
                             <constraint firstItem="pTC-2F-e8c" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="h5n-4I-4j3"/>
                         </constraints>
@@ -211,6 +226,9 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
