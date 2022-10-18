@@ -33,12 +33,12 @@ class Game: GameProtocol {
         
         if boardArray[index].isEmpty && gameFinished == .running {
             boardArray[index] = currentPlayer.name
-            currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             
             if let value = checkPlayerWinStatus() {
                 return (value,gameFinished)
             }
             
+            currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             return (boardArray[index],gameFinished)
         }
         return (nil,gameFinished)
