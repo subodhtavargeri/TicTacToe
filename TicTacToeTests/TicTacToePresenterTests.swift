@@ -23,7 +23,7 @@ class TicTacToePresenterTests: XCTestCase {
         
         presenter?.loadPresenter()
         
-        let expecation = "X"
+        let expecation = "Current Player X"
         XCTAssertEqual(view.playerName, expecation)
     }
     
@@ -32,7 +32,7 @@ class TicTacToePresenterTests: XCTestCase {
         presenter?.playerClickEvent(index: 1)
         
         let expecation = "Player O Wins!!!"
-    
+        
         XCTAssertEqual(view.playerName, expecation)
     }
     
@@ -51,6 +51,5 @@ class TicTacToePresenterTests: XCTestCase {
         let expecation = Constant.Message.drawGame
         XCTAssertEqual(view.playerName, expecation)
     }
-    
     
 }

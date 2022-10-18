@@ -7,55 +7,39 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A2872F4E-B17F-46A1-B382-099D5FC45369"
+            uuid = "69805961-5770-4BD6-83B1-06AE205FA9A6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TicTacToeTests/GameTests.swift"
+            filePath = "TicTacToe/Game/TicTacToePresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
-            landmarkName = "test_GameStatusIsDrawn_WhenThereIsNoEmptyBlockToBeFilled()"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "playerClickEvent(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79AE890A-31B8-476D-84C3-0D37FC80759C"
+            uuid = "16E5135F-ECF0-4A6E-910B-35D19A8FDFF0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TicTacToe/Game/Game.swift"
+            filePath = "TicTacToeTests/TicTacToePresenterTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "playerPlays(index:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "test_CurrentPlayerNameIsSetToX_WhenGameLoads()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BEE369F7-8590-410C-B76F-DD4D309AC3D3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TicTacToeTests/Spy/GameSpy.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
-            landmarkName = "playerPlays(index:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9143E24B-E899-49E9-BA5A-FB4341C4A6AF"
+            uuid = "B3E893E7-0511-4AA5-AF85-7B30C61A4EDB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -65,6 +49,22 @@
             startingLineNumber = "15"
             endingLineNumber = "15"
             landmarkName = "displayCurrentPlayerName(playerName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB8B0E47-C69C-4461-9F90-EE089F80F7A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TicTacToeTests/TicTacToePresenterTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "test_CurrentPlayerNameIsSetToO_WhenPlayerXFinishesPlaying()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
