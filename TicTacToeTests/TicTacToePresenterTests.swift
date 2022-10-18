@@ -32,7 +32,6 @@ class TicTacToePresenterTests: XCTestCase {
         presenter?.playerClickEvent(index: 1)
         
         let expecation = "Player O Wins!!!"
-        
         XCTAssertEqual(view.playerName, expecation)
     }
     

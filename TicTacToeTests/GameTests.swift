@@ -36,8 +36,8 @@ class GameTests: XCTestCase {
     func test_CurrentPlayerIsChangedToPlayerO_WhenPlayerXTurnIsDone() {
         
         let _ = game.playerPlays(index: 0)
-        let expected = playerO
         
+        let expected = playerO
         XCTAssertEqual(game.getCurrentPlayer().name, expected)
     }
     
@@ -53,6 +53,7 @@ class GameTests: XCTestCase {
     func test_NewValueIsInsertedIntoBoardArrayAtIndex_IfIndexIsEmptyAtBoardValue() {
         
         let index = 0
+        
         let _ = game.playerPlays(index: index)
         
         let expected = playerX
@@ -62,8 +63,8 @@ class GameTests: XCTestCase {
     func test_NewValueIsNotInsertedIntoBoardArrayAtIndex_IfIndexIsNotEmptyAtBoardValue() {
         
         let index = 1
-        let _ = game.playerPlays(index: index)
         
+        let _ = game.playerPlays(index: index)
         let _ = game.playerPlays(index: index)
         
         let expected = playerX
@@ -73,6 +74,7 @@ class GameTests: XCTestCase {
     func test_CurrentPlayerIsUpdated_WhenBoardArrayValueIsUpdated() {
         
         let index = 2
+        
         let _ = game.playerPlays(index: index)
         
         let expected = playerO
@@ -82,6 +84,7 @@ class GameTests: XCTestCase {
     func test_CurrentPlayerNameIsReturned_WhenBoardArrayIndexIsEmpty() {
         
         let index = 2
+        
         let originalName = game.playerPlays(index: index)
         
         let expected = playerX
@@ -91,8 +94,8 @@ class GameTests: XCTestCase {
     func test_CurrentPlayerNameIsReturnedAsO_WhenBoardArrayIndexIsEmpty() {
         
         let index = 4
-        let _ = game.playerPlays(index: 2)
         
+        let _ = game.playerPlays(index: 2)
         let originalName = game.playerPlays(index: index)
         
         let expected = playerO
@@ -102,8 +105,8 @@ class GameTests: XCTestCase {
     func test_CurrentPlayerNameIsReturnedAsNil_WhenBoardArrayIndexHasValue() {
         
         let index = 2
-        let _ = game.playerPlays(index: 2)
         
+        let _ = game.playerPlays(index: 2)
         let originalName = game.playerPlays(index: index).0
         
         XCTAssertNil(originalName)
@@ -203,7 +206,6 @@ class GameTests: XCTestCase {
     func test_PlayerXWins_WhenPlayerXMatchesRules_0_4_8() {
         
         var original = ""
-        
         let playIndex = [1,2,0,5,4,3,8]
         
         for index in 0..<playIndex.count {

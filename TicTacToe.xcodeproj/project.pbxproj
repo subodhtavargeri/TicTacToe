@@ -104,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5B24561628FA8B2300EED22E /* GameSpy.swift */,
+				5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */,
 				5BF2209928FAA45E00266E8F /* TicTacToePresenterSpy.swift */,
 			);
 			path = Spy;
@@ -150,7 +151,6 @@
 				5B48C8A028F93C980039E410 /* TicTacToeTests.swift */,
 				5B48C8B928F93EA20039E410 /* GameTests.swift */,
 				5B48C8C328F9A3040039E410 /* TicTacToePresenterTests.swift */,
-				5B48C8C728F9A4130039E410 /* TicTacToeViewControllerSpy.swift */,
 				5BF2209528FAA00200266E8F /* TicTacToeViewControllerTests.swift */,
 			);
 			path = TicTacToeTests;
