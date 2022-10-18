@@ -59,7 +59,6 @@ class Game: GameProtocol {
         
         if !boardArray.contains("") {
             gameFinished = .draw
-            return Constant.Message.drawGame
         }
         return nil
     }

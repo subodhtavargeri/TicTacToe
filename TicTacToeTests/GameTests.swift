@@ -228,30 +228,28 @@ class GameTests: XCTestCase {
     }
     
     
-    func test_GameIsDrawn_WhenThereIsNoEmptyBlockToBeFilled() {
+    func test_GameStatusIsDrawn_WhenThereIsNoEmptyBlockToBeFilled() {
         
-        var original = ""
         let playIndex = [0,1,2,4,7,3,5,8,6]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]).0 ?? ""
+            _ = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
-        let expecation = Constant.Message.drawGame
-        XCTAssertEqual(original, expecation)
+        let expecation = Constant.GameStatus.draw
+        XCTAssertEqual(game.isGameFinished(), expecation)
     }
     
-    func test_GameIsDrawn_WhenThereIsNoEmptyBlockToBeFilled_WithDifferentCombination() {
+    func test_GameStatusIsDrawn_WhenThereIsNoEmptyBlockToBeFilled_WithDifferentCombination() {
         
-        var original = ""
         let playIndex = [2,4,8,5,3,1,7,6,0]
         
         for index in 0..<playIndex.count {
-            original = game.playerPlays(index: playIndex[index]).0 ?? ""
+            _ = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
-        let expecation = Constant.Message.drawGame
-        XCTAssertEqual(original, expecation)
+        let expecation = Constant.GameStatus.draw
+        XCTAssertEqual(game.isGameFinished(), expecation)
     }
     
     func test_CurrentPlayerIsSetToPlayerXName_WhenGameLoads() {
