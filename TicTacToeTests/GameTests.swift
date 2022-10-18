@@ -262,13 +262,13 @@ class GameTests: XCTestCase {
         XCTAssertEqual(original, expectation)
     }
     
-    func test_GameFinishedIsFalse_WhenGameLoads() {
+    func test_GameFinishedIsRunning_WhenGameLoads() {
         
         let expectation = Constant.GameStatus.running
         XCTAssertEqual(game.isGameFinished(),expectation)
     }
     
-    func test_GameFinishedStatusIsTrue_WhenPlayerXWins_0_1_2() {
+    func test_GameFinishedStatusIsFinished_WhenPlayerXWins_0_1_2() {
         
         let playIndex = [0,4,1,5,2]
         
@@ -280,7 +280,7 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.isGameFinished(),expectation)
     }
     
-    func test_GameFinishedStatusIsTrue_WhenPlayerXWins_InReverseOrder_4_8_0() {
+    func test_GameFinishedStatusIsFinished_WhenPlayerXWins_InReverseOrder_4_8_0() {
         
         let playIndex = [4,2,8,5,0]
         
