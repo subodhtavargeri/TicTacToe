@@ -32,7 +32,6 @@ class TicTacToePresenterTests: XCTestCase {
         presenter?.playerClickEvent(index: 1)
         
         let expecation = "O"
-        
         XCTAssertEqual(view.title, expecation)
     }
     
@@ -40,11 +39,16 @@ class TicTacToePresenterTests: XCTestCase {
         
         presenter?.playerClickEvent(index: 1)
         
-        
         let expecation = "Player X Wins!!!"
-        
         XCTAssertEqual(view.playerName, expecation)
+    }
+    
+    func test_GameDrawMessageIsDisplayed_WhenGameEndsInDraw() {
         
+        presenter?.playerClickEvent(index: 0)
+        
+        let expecation = Constant.Message.drawGame
+        XCTAssertEqual(view.playerName, expecation)
     }
     
     
