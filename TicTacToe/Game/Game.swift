@@ -5,7 +5,7 @@ protocol GameProtocol {
     func resetGame()
 }
 class Game: GameProtocol {
-   
+    
     private var playerX: Player
     private var playerO: Player
     private var currentPlayer: Player
@@ -52,7 +52,7 @@ class Game: GameProtocol {
             let player1 = boardArray[rule[1]]
             let player2 = boardArray[rule[2]]
             
-            if player0 == player1 && player2 == player1 && !player0.isEmpty {
+            if checkIfAnyPlayerMatchesAsPerRule(player0: player0, player1: player1, player2: player2) {
                 gameFinished = .finished
                 let message = String(format: Constant.Message.playerWins, arguments: [player0])
                 return message
@@ -64,6 +64,13 @@ class Game: GameProtocol {
             return Constant.Message.drawGame
         }
         return nil
+    }
+    
+    private func checkIfAnyPlayerMatchesAsPerRule(player0: String,
+                                                  player1: String,
+                                                  player2: String)-> Bool {
+        
+        return player0 == player1 && player2 == player1 && !player0.isEmpty
     }
     
     func getCurrentPlayer()-> Player {
