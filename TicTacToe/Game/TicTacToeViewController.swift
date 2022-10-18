@@ -28,6 +28,10 @@ class TicTacToeViewController: UIViewController {
         presenter?.playerClickEvent(index: senderButton?.tag ?? 100)
     }
     
+    @IBAction func resetGame() {
+        presenter?.resetGame()
+    }
+    
 }
 
 extension TicTacToeViewController: TicTacToeViewProtocol {

@@ -51,4 +51,14 @@ class TicTacToeViewControllerTests: XCTestCase {
         let expectation = "X"
         XCTAssertEqual(view?.labelCurrentPlayer.text, expectation)
     }
+    
+    func test_CurrentPlayerLabelIsResetTo_PlayerNameX_WhenButtonResetIsPressed() {
+        
+        view?.resetGame()
+        view?.displayCurrentPlayerName(playerName: "X")
+        
+        let expectation = "X"
+        XCTAssertEqual(view?.labelCurrentPlayer.text, expectation)
+    }
+    
 }
