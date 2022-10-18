@@ -72,4 +72,11 @@ class Game: GameProtocol {
     func isGameFinished()-> Constant.GameStatus {
         return gameFinished
     }
+    
+    func resetGame() {
+        boardArray.removeAll()
+        gameFinished = .running
+        currentPlayer = playerX
+        setUpBoardArray()
+    }
 }

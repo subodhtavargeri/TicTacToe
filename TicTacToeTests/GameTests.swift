@@ -302,4 +302,10 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.isGameFinished(), expecation)
     }
     
+    func test_GameStatusIsResetToRunning_WhenGameIsReset() {
+        
+        game.resetGame()
+        
+        XCTAssertEqual(game.isGameFinished(), .running)
+    }
 }
