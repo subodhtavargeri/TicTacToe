@@ -54,7 +54,7 @@ class Game: GameProtocol {
             
             if player0 == player1 && player2 == player1 && !player0.isEmpty {
                 gameFinished = .finished
-                let message = "Player \(player0) Wins!!!"
+                let message = String(format: Constant.Message.playerWins, arguments: [player0])
                 return message
             }
         }

@@ -2,6 +2,7 @@ struct Constant {
     
     struct Message {
         static let drawGame = "Game Ends in a Draw!!!"
+        static let playerWins = "Player %@ Wins!!!"
     }
     
     struct Title {
