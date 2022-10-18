@@ -14,4 +14,9 @@ iOS app is an TicTacToe Game of Two Players
 - Simulator
 - Tested for Iphone and Ipad.
 
+## Run Application
+
+- Open TicTacToe.xcodeproj uing Xcode (preferably 13.4.1).
+- Run application on any Iphone/Ipad simulator.
+
 
