@@ -53,12 +53,14 @@ class Game: GameProtocol {
             
             if player0 == player1 && player2 == player1 && !player0.isEmpty {
                 gameFinished = .finished
-                return player0
+                let message = "Player \(player0) Wins!!!"
+                return message
             }
         }
         
         if !boardArray.contains("") {
             gameFinished = .draw
+            return Constant.Message.drawGame
         }
         return nil
     }
