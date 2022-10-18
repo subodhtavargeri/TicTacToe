@@ -308,4 +308,18 @@ class GameTests: XCTestCase {
         
         XCTAssertEqual(game.isGameFinished(), .running)
     }
+    
+    func test_BoardArrayIsResetToEmpty_WhenGameIsReset() {
+        
+        game.resetGame()
+        
+        XCTAssertTrue(game.boardArray[1].isEmpty)
+    }
+    
+    func test_CurrentPlayerIsResetToX_WhenGameIsReset() {
+        
+        game.resetGame()
+        
+        XCTAssertEqual(game.getCurrentPlayer().name, "X")
+    }
 }
