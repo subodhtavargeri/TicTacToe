@@ -1,6 +1,7 @@
 protocol TicTacToePresenterProtocol {
     func loadPresenter()
     func playerClickEvent(index: Int)
+    func resetGame()
 }
 
 class TicTacToePresenter: TicTacToePresenterProtocol {
@@ -45,5 +46,9 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
             view?.setButtonTitle(title: message)
             displayCurrentPlayer()
         }
+    }
+    
+    func resetGame() {
+        game.resetGame()
     }
 }

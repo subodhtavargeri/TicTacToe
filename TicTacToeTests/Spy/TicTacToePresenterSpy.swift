@@ -2,6 +2,10 @@
 
 class TicTacToePresenterSpy: TicTacToePresenterProtocol {
     
+    func resetGame() {
+        
+    }
+    
     func playerClickEvent(index: Int) {
         
     }
