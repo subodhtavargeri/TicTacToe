@@ -1,15 +1,15 @@
 protocol GameProtocol {
-    func playerPlays(index: Int)-> (String?,Bool)
+    func playerPlays(index: Int)-> (String?,Constant.GameStatus)
     func getCurrentPlayer()-> Player
-    func isGameFinished()-> Bool
+    func isGameFinished()-> Constant.GameStatus
 }
 class Game: GameProtocol {
-    
+   
     private var playerX: Player
     private var playerO: Player
     private var currentPlayer: Player
     private (set) var boardArray = [String]()
-    private var gameFinished = false
+    private var gameFinished: Constant.GameStatus = .running
     
     private let winningRules = [[0,1,2],[3,4,5],
                                 [6,7,8],[0,3,6],
@@ -29,14 +29,14 @@ class Game: GameProtocol {
         }
     }
     
-    func playerPlays(index: Int)-> (String?,Bool) {
+    func playerPlays(index: Int)-> (String?,Constant.GameStatus) {
         
-        if boardArray[index].isEmpty && !gameFinished {
+        if boardArray[index].isEmpty && gameFinished == .running {
             boardArray[index] = currentPlayer.name
             currentPlayer = (currentPlayer == playerX) ? playerO : playerX
             
             if let value = checkPlayerWinStatus() {
-                gameFinished = true
+                gameFinished = .finished
                 return (value,gameFinished)
             }
             
@@ -53,11 +53,13 @@ class Game: GameProtocol {
             let player2 = boardArray[rule[2]]
             
             if player0 == player1 && player2 == player1 && !player0.isEmpty {
+                gameFinished = .finished
                 return player0
             }
         }
         
         if !boardArray.contains("") {
+            gameFinished = .draw
             return Constant.Message.drawGame
         }
         return nil
@@ -67,7 +69,7 @@ class Game: GameProtocol {
         return currentPlayer
     }
     
-    func isGameFinished()-> Bool {
+    func isGameFinished()-> Constant.GameStatus {
         return gameFinished
     }
 }

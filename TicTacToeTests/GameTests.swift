@@ -264,7 +264,8 @@ class GameTests: XCTestCase {
     
     func test_GameFinishedIsFalse_WhenGameLoads() {
         
-        XCTAssertFalse(game.isGameFinished())
+        let expectation = Constant.GameStatus.running
+        XCTAssertEqual(game.isGameFinished(),expectation)
     }
     
     func test_GameFinishedStatusIsTrue_WhenPlayerXWins_0_1_2() {
@@ -275,7 +276,8 @@ class GameTests: XCTestCase {
             _ = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
-        XCTAssertTrue(game.isGameFinished())
+        let expectation = Constant.GameStatus.finished
+        XCTAssertEqual(game.isGameFinished(),expectation)
     }
     
     func test_GameFinishedStatusIsTrue_WhenPlayerXWins_InReverseOrder_4_8_0() {
@@ -286,7 +288,8 @@ class GameTests: XCTestCase {
             _ = game.playerPlays(index: playIndex[index]).0 ?? ""
         }
         
-        XCTAssertTrue(game.isGameFinished())
+        let expectation = Constant.GameStatus.finished
+        XCTAssertEqual(game.isGameFinished(),expectation)
     }
     
 }

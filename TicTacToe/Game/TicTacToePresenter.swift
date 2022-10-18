@@ -37,7 +37,7 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
             
             let gameStatus = clickData.1
             
-            if gameStatus {
+            if gameStatus == .finished {
                 let message = "Player \(title) Wins"
                 view?.displayCurrentPlayerName(playerName: message)
                 return

@@ -7,4 +7,8 @@ struct Constant {
     struct Title {
         static let screenTitle = "Tic Tac Toe"
     }
+    
+    enum GameStatus {
+        case running, finished, draw
+    }
 }

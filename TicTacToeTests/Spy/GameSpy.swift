@@ -2,16 +2,16 @@
 
 class GameSpy: GameProtocol {
     
-    func playerPlays(index: Int) -> (String?, Bool) {
-        return  (index == 1) ? ("O",true) : ("X",false)
+    func playerPlays(index: Int) -> (String?, Constant.GameStatus) {
+        return (index == 1) ? ("O",.finished) : ("X",.running)
+    }
+    
+    func isGameFinished() -> Constant.GameStatus {
+        return .finished
     }
     
     func getCurrentPlayer() -> Player {
         return Player(name: "X")
-    }
-    
-    func isGameFinished() -> Bool {
-        return false
     }
     
 }
