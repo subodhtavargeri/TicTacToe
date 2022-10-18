@@ -2,6 +2,7 @@ protocol GameProtocol {
     func playerPlays(index: Int)-> (String?,Constant.GameStatus)
     func getCurrentPlayer()-> Player
     func isGameFinished()-> Constant.GameStatus
+    func resetGame()
 }
 class Game: GameProtocol {
    

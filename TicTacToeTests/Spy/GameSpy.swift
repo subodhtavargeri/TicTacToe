@@ -1,6 +1,8 @@
 @testable import TicTacToe
 
 class GameSpy: GameProtocol {
+  
+    var gameStatus: Constant.GameStatus = .finished
     
     func playerPlays(index: Int) -> (String?, Constant.GameStatus) {
         return (index == 1) ? ("Player O Wins!!!",.finished) : (Constant.Message.drawGame,.draw)
@@ -14,4 +16,7 @@ class GameSpy: GameProtocol {
         return Player(name: "X")
     }
     
+    func resetGame() {
+        gameStatus = .running
+    }
 }
