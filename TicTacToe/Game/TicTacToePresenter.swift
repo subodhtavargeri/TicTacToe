@@ -37,12 +37,26 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
             
             let gameStatus = clickData.1
             
-            if gameStatus == .finished {
-                let message = "Player \(title) Wins"
-                view?.displayCurrentPlayerName(playerName: message)
+            if gameStatus == .finished || gameStatus == .draw {
+                displayMessageAsPerGameStatus(gameStatus: gameStatus, player: game.getCurrentPlayer().name)
                 return
             }
+            
             displayCurrentPlayer()
         }
+    }
+    
+    private func displayMessageAsPerGameStatus(gameStatus: Constant.GameStatus, player: String) {
+        
+        if gameStatus == .finished {
+            let message = "Player \(player) Wins!!!"
+            view?.displayCurrentPlayerName(playerName: message)
+            return
+        }
+        
+        if gameStatus == .draw {
+            view?.displayCurrentPlayerName(playerName: Constant.Message.drawGame)
+        }
+        
     }
 }
