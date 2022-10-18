@@ -30,6 +30,10 @@ class TicTacToeViewController: UIViewController {
     
     @IBAction func resetGame() {
         presenter?.resetGame()
+        
+        buttonBoxes.forEach {
+            $0.setTitle("", for: .normal)
+        }
     }
     
 }
