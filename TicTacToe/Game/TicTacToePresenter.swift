@@ -50,5 +50,6 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
     
     func resetGame() {
         game.resetGame()
+        displayCurrentPlayer()
     }
 }

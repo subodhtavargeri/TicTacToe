@@ -52,11 +52,18 @@ class TicTacToePresenterTests: XCTestCase {
         XCTAssertEqual(view.playerName, expecation)
     }
     
-    func test_GameStatusIsRunnint_WhenGameIsReset() {
+    func test_GameStatusIsRunning_WhenGameIsReset() {
         
         presenter?.resetGame()
         
         XCTAssertEqual(game.gameStatus,.running)
     }
     
+    func test_CurrentPlayerNameIsSetToX_WhenGameIsReset() {
+        
+        presenter?.resetGame()
+        
+        let expecation = "Current Player X"
+        XCTAssertEqual(view.playerName, expecation)
+    }
 }
