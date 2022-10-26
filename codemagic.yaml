@@ -1,7 +1,7 @@
 workflows:
   my-workflow:
     scripts: 
-      - name: multi-line script
+      - name: TicTacToe Pipeline
         script: |
           xcode-project run-tests \
             --workspace TicTacToe.xcworkspace \
