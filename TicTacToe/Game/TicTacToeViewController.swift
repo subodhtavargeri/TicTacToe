@@ -34,6 +34,13 @@ class TicTacToeViewController: UIViewController {
             $0.setTitle("", for: .normal)
         }
     }
+    func testLinter()  {
+        print("Lineter test")
+    }
+    
+    func testLinterNew()  {
+print("Lineter test2222")
+    }
     
 }
 
