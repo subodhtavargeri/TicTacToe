@@ -4,6 +4,9 @@ workflows:
       - name: multi-line script
         script: |
         xcode-project run-tests \
-          --workspace MyAwesomeApp.xcworkspace \
-          --scheme MyAwesomeApp \
-          --device "iPhone 11"
+          --workspace TicTacToe.xcworkspace \
+          --scheme TicTacToe
+  publishing:
+  email:
+  recipients:
+  - subodh.tavargeri@gmail.com
