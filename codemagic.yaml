@@ -6,7 +6,4 @@ workflows:
           xcode-project run-tests \
             --workspace TicTacToe.xcworkspace \
             --scheme TicTacToe
-  publishing:
-    email:
-      recipients:
-        - subodh.tavargeri@gmail.com
+  
