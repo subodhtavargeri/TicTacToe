@@ -1,5 +1,5 @@
 protocol GameProtocol {
-    func playerPlays(index: Int)-> (String?,Constant.GameStatus)
+    func playerPlays(index: Int)-> (title: String?,gameState: Constant.GameStatus)
     func getCurrentPlayer()-> Player
     func getGameStatus()-> Constant.GameStatus
     func resetGame()
@@ -9,13 +9,19 @@ class Game: GameProtocol {
     private var playerX: Player
     private var playerO: Player
     private var currentPlayer: Player
-    private (set) var boardArray = [String]()
+    private var boardArray = [String]()
     private var gameStatus: Constant.GameStatus = .running
     
-    private let winningRules = [[0,1,2],[3,4,5],
-                                [6,7,8],[0,3,6],
-                                [1,4,7],[2,5,8],
-                                [0,4,8],[2,4,6]]
+    private enum Postions: Int {
+        case topLeft = 0, topCentre = 1, topRight = 2, middleLeft = 3, middleCentre = 4, middleRight = 5,
+             bottomLeft = 6, bottomCentre = 7, bottomRight = 8
+    }
+    
+    private let winningRules = [[Postions.topLeft.rawValue,Postions.topCentre.rawValue,Postions.topRight.rawValue],[Postions.middleLeft.rawValue,Postions.middleCentre.rawValue,Postions.middleRight.rawValue],
+        [Postions.bottomLeft.rawValue,Postions.bottomCentre.rawValue,Postions.bottomRight.rawValue],[Postions.topLeft.rawValue,Postions.middleLeft.rawValue,Postions.bottomLeft.rawValue],
+         [Postions.topCentre.rawValue,Postions.middleCentre.rawValue,Postions.bottomCentre.rawValue],[Postions.topRight.rawValue,Postions.middleRight.rawValue,Postions.bottomRight.rawValue],
+        [Postions.topLeft.rawValue,Postions.middleCentre.rawValue,Postions.bottomRight.rawValue],[Postions.topRight.rawValue,Postions.middleCentre.rawValue,Postions.bottomLeft.rawValue]]
+    
     
     init() {
         playerX = Player(name: "X")
@@ -30,7 +36,7 @@ class Game: GameProtocol {
         }
     }
     
-    func playerPlays(index: Int)-> (String?,Constant.GameStatus) {
+    func playerPlays(index: Int)-> (title: String?,gameState: Constant.GameStatus) {
         
         if boardArray[index].isEmpty && gameStatus == .running {
             boardArray[index] = currentPlayer.name

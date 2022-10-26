@@ -33,9 +33,9 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
         
         let clickData = game.playerPlays(index: index)
         
-        if let message = clickData.0 {
+        if let message = clickData.title {
             
-            let gameStatus = clickData.1
+            let gameStatus = clickData.gameState
             
             if gameStatus == .finished || gameStatus == .draw {
                 view?.setButtonTitle(title: game.getCurrentPlayer().name)
