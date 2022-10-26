@@ -3,10 +3,10 @@ workflows:
     scripts: 
       - name: multi-line script
         script: |
-        xcode-project run-tests \
-          --workspace TicTacToe.xcworkspace \
-          --scheme TicTacToe
+          xcode-project run-tests \
+            --workspace TicTacToe.xcworkspace \
+            --scheme TicTacToe
   publishing:
-  email:
-  recipients:
-  - subodh.tavargeri@gmail.com
+    email:
+      recipients:
+        - subodh.tavargeri@gmail.com
