@@ -1,5 +1,6 @@
 workflows:
   my-workflow:
+  name: Test workflow
     scripts:
       - name: iOS test
       script: | 
