@@ -1,10 +1,9 @@
 workflows:
-  ticTacToe-workflow:
-  scripts:
-    - name: iOS test
-      script: | 
-        xcode-project run-tests \
-          --workspace MyAwesomeApp.xcworkspace \
-          --scheme MyAwesomeApp \
-          --device "iPhone 11"
-    test_report: build/ios/test/*.xml
+  my-workflow:
+    scripts: 
+      - name: multi-line script
+        script: |
+          set -e # exit on first failed command
+
+          echo first command
+          echo second command
