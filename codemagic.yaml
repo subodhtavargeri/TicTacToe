@@ -3,7 +3,7 @@ workflows:
     scripts: 
       - name: multi-line script
         script: |
-          set -e # exit on first failed command
-
-          echo first command
-          echo second command
+        xcode-project run-tests \
+          --workspace MyAwesomeApp.xcworkspace \
+          --scheme MyAwesomeApp \
+          --device "iPhone 11"
