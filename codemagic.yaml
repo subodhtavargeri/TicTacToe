@@ -1,5 +1,6 @@
 workflows:
-  my-workflow:
+  TicTacToe-workflow:
+  name: TicTacToe
     scripts: 
       - name: multi-line script
         script: |
