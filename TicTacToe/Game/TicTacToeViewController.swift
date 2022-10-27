@@ -20,6 +20,9 @@ class TicTacToeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.loadPresenter()
+        buttonBoxes.forEach {
+            $0.setTitle("", for: .normal)
+        }
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {

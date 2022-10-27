@@ -18,9 +18,9 @@ class Game: GameProtocol {
     }
     
     private let winningRules = [[Postions.topLeft.rawValue,Postions.topCentre.rawValue,Postions.topRight.rawValue],[Postions.middleLeft.rawValue,Postions.middleCentre.rawValue,Postions.middleRight.rawValue],
-        [Postions.bottomLeft.rawValue,Postions.bottomCentre.rawValue,Postions.bottomRight.rawValue],[Postions.topLeft.rawValue,Postions.middleLeft.rawValue,Postions.bottomLeft.rawValue],
-         [Postions.topCentre.rawValue,Postions.middleCentre.rawValue,Postions.bottomCentre.rawValue],[Postions.topRight.rawValue,Postions.middleRight.rawValue,Postions.bottomRight.rawValue],
-        [Postions.topLeft.rawValue,Postions.middleCentre.rawValue,Postions.bottomRight.rawValue],[Postions.topRight.rawValue,Postions.middleCentre.rawValue,Postions.bottomLeft.rawValue]]
+                                [Postions.bottomLeft.rawValue,Postions.bottomCentre.rawValue,Postions.bottomRight.rawValue],[Postions.topLeft.rawValue,Postions.middleLeft.rawValue,Postions.bottomLeft.rawValue],
+                                [Postions.topCentre.rawValue,Postions.middleCentre.rawValue,Postions.bottomCentre.rawValue],[Postions.topRight.rawValue,Postions.middleRight.rawValue,Postions.bottomRight.rawValue],
+                                [Postions.topLeft.rawValue,Postions.middleCentre.rawValue,Postions.bottomRight.rawValue],[Postions.topRight.rawValue,Postions.middleCentre.rawValue,Postions.bottomLeft.rawValue]]
     
     
     init() {
@@ -54,29 +54,38 @@ class Game: GameProtocol {
     private func checkPlayerWinStatus()-> String? {
         
         for rule in winningRules {
-            let player0 = boardArray[rule[0]]
-            let player1 = boardArray[rule[1]]
-            let player2 = boardArray[rule[2]]
+            let playerPositionAsPerRule0 = boardArray[rule[0]]
+            let playerPositionAsPerRule1 = boardArray[rule[1]]
+            let playerPositionAsPerRule2 = boardArray[rule[2]]
             
-            if checkIfAnyPlayerMatchesAsPerRule(player0: player0, player1: player1, player2: player2) {
-                gameStatus = .finished
-                let message = String(format: Constant.Message.playerWins, arguments: [player0])
+            if checkIfAnyPlayerMatchesAsPerRule(playerPositionIndex0: playerPositionAsPerRule0, playerPositionIndex1: playerPositionAsPerRule1, playerPositionIndex2: playerPositionAsPerRule2) {
+                let message = String(format: Constant.Message.playerWins, arguments: [playerPositionAsPerRule0])
                 return message
             }
         }
         
-        if !boardArray.contains("") {
-            gameStatus = .draw
+        if checkForDrawCondtion() {
             return Constant.Message.drawGame
         }
         return nil
     }
     
-    private func checkIfAnyPlayerMatchesAsPerRule(player0: String,
-                                                  player1: String,
-                                                  player2: String)-> Bool {
+    private func checkForDrawCondtion()-> Bool {
+        if !boardArray.contains("") {
+            gameStatus = .draw
+        }
+        return !boardArray.contains("")
+    }
+    
+    private func checkIfAnyPlayerMatchesAsPerRule(playerPositionIndex0: String,
+                                                  playerPositionIndex1: String,
+                                                  playerPositionIndex2: String)-> Bool {
         
-        return player0 == player1 && player2 == player1 && !player0.isEmpty
+        if playerPositionIndex0 == playerPositionIndex1 && playerPositionIndex2 == playerPositionIndex1 && !playerPositionIndex0.isEmpty {
+            gameStatus = .finished
+            return true
+        }
+        return false
     }
     
     func getCurrentPlayer()-> Player {
