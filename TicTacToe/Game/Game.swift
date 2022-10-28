@@ -54,11 +54,14 @@ class Game: GameProtocol {
             boardArray.append("")
         }
     }
+    private func insertIntoBoardArray(index: Int) {
+        boardArray[index] = currentPlayer.name
+    }
     
     func playerPlays(index: Int)-> (title: String?,gameState: Constant.GameStatus) {
         
         if boardArray[index].isEmpty && gameStatus == .running {
-            boardArray[index] = currentPlayer.name
+            insertIntoBoardArray(index: index)
             
             gameStatus = computeGameStatus()
             switch gameStatus {
@@ -96,7 +99,6 @@ class Game: GameProtocol {
         if checkForDrawCondition() {
             return .draw
         }
-        
         return .running
     }
     
@@ -112,7 +114,6 @@ class Game: GameProtocol {
                                       playerPositionIndex2: String)-> Bool {
         
         if playerPositionIndex0 == playerPositionIndex1 && playerPositionIndex2 == playerPositionIndex1 && !playerPositionIndex0.isEmpty {
-            setGameStatus(status: .finished)
             return true
         }
         return false
