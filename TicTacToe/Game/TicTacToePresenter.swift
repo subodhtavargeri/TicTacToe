@@ -18,7 +18,17 @@ class TicTacToePresenter: TicTacToePresenterProtocol {
     func loadPresenter() {
         displayTitle()
         displayCurrentPlayer()
+        
+#if Payments
+        checkForPayments()
+    
+    
+    #endif
     }
+
+func checkForPayments() {
+    print("Payments>>>>")
+}
     
     private func displayTitle() {
         view?.displayTitle(_title: Constant.Title.screenTitle)
